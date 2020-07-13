@@ -12,7 +12,7 @@ import (
 
 type ServerEnv struct {
 	Host string
-	Port int
+	Port string
 }
 
 type ApiEnv struct {
@@ -39,7 +39,7 @@ func main() {
 
 	var serverEnv ServerEnv
 	envconfig.Process("SERVER", &serverEnv)
-	conn, err := grpc.Dial(serverEnv.Host+":"+string(serverEnv.Port), grpc.WithInsecure())
+	conn, err := grpc.Dial(serverEnv.Host+":"+serverEnv.Port, grpc.WithInsecure())
 	if err != nil {
 		log.Fatalln(err)
 		return
