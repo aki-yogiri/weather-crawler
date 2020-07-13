@@ -48,7 +48,7 @@ func main() {
 	client := pb.NewWeatherClient(conn)
 	res, err := client.PutWeather(context.TODO(), resp)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 		return
 	}
 
