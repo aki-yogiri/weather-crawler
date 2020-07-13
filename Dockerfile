@@ -12,5 +12,5 @@ RUN go build -o app main.go
 
 FROM alpine
 RUN apk add --no-cache ca-certificates
-COPY --from=builder /go/src/github.com/aki-yogiri/weather-store/app /app
+COPY --from=builder /go/src/github.com/aki-yogiri/weather-crawler/app /app
 ENTRYPOINT ["/app"]
