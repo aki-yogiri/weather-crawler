@@ -1,0 +1,30 @@
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: weather-crawler-tokyo
+  labels:
+    app: weather
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          imagePullSecrets:
+            - name: regcred
+          restartPolicy: OnFailure
+          containers:
+            - image: 418330922897.dkr.ecr.ap-northeast-1.amazonaws.com/weather-crawler
+              name: weather-crawler
+              env:
+                - name: API_KEY
+                  value: <apikey>
+                - name: API_URI
+                  value: "https://api.openweathermap.org/data/2.5/weather"
+                - name: API_LOCATION
+                  value: "Tokyo,jp"
+                - name: SERVER_HOST
+                  value: "weather-store"
+                - name: SERVER_PORT
+                  value: "80"
