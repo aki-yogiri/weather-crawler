@@ -18,7 +18,7 @@ type ServerEnv struct {
 type ApiEnv struct {
 	Uri      string
 	Location string
-	ApiKey   string
+	Key      string
 }
 
 func main() {
@@ -27,7 +27,7 @@ func main() {
 
 	endpoint := requester.NewOpenWeatherEndpoint(apiEnv.Uri)
 	values := &url.Values{}
-	values.Add("appid", apiEnv.ApiKey)
+	values.Add("appid", apiEnv.Key)
 	values.Add("q", apiEnv.Location)
 
 	resp, err := endpoint.Request(values)
