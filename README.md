@@ -11,7 +11,7 @@ Docker でのビルドを想定しています。
 ```
 $ git clone https://github.com/aki-yogiri/weather-crawler.git
 $ cd weather-crawler
-$ sudo docker build -t weather-crawler:v1.0.3 .
+$ sudo docker build -t weather-crawler:v1.0.0 .
 ```
 
 # Deploy on Kubernetes
