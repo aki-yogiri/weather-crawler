@@ -17,7 +17,7 @@ $ sudo docker build -t weather-crawler:v1.0.0 .
 # Deploy on Kubernetes
 
 ```
-$ kubectl apply -f <path>/<to>/<weather-crawler>/kubernetes/weather-csv.yaml
+$ kubectl apply -f <path>/<to>/<weather-crawler>/kubernetes/weather-crawler.yaml
 ```
 
 
