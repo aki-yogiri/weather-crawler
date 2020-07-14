@@ -52,13 +52,6 @@ spec:
           imagePullSecrets:
             - name: regcred
           restartPolicy: OnFailure
-          resources:
-            limits:
-              cpu: "1"
-              memory: "200Mi"
-            requests:
-              cpu: "0.5"
-              memory: "100Mi"
           containers:
             - image: 418330922897.dkr.ecr.ap-northeast-1.amazonaws.com/weather-crawler:v1.0.0
               name: weather-crawler
@@ -73,3 +66,10 @@ spec:
                   value: "weather-store"
                 - name: SERVER_PORT
                   value: "80"
+              resources:
+                limits:
+                  cpu: "1"
+                  memory: "200Mi"
+                requests:
+                  cpu: "0.5"
+                  memory: "100Mi"
