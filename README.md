@@ -31,4 +31,4 @@ weather-crawlerは以下の環境変数を利用します。
 | API_URI | https://api.openweathermap.org/data/2.5/weather | |
 | API_LOCATION | Tokyo,jp | `都市名,国`の形式で記述 |
 | SERVER_HOST | weather-store | weather-storeサービスのホスト名 |
-| SERVER_PORT | 80 | weather-storeサービスのホスト名 |
+| SERVER_PORT | 80 | weather-storeサービスのポート番号 |
