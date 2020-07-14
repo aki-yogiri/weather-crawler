@@ -15,7 +15,7 @@ spec:
             - name: regcred
           restartPolicy: OnFailure
           containers:
-            - image: 418330922897.dkr.ecr.ap-northeast-1.amazonaws.com/weather-crawler:v1.0.0
+            - image: 418330922897.dkr.ecr.ap-northeast-1.amazonaws.com/weather-crawler:v1.0.1
               name: weather-crawler
               env:
                 - name: API_KEY
@@ -53,7 +53,7 @@ spec:
             - name: regcred
           restartPolicy: OnFailure
           containers:
-            - image: 418330922897.dkr.ecr.ap-northeast-1.amazonaws.com/weather-crawler:v1.0.0
+            - image: 418330922897.dkr.ecr.ap-northeast-1.amazonaws.com/weather-crawler:v1.0.1
               name: weather-crawler
               env:
                 - name: API_KEY
