@@ -14,6 +14,13 @@ $ cd weather-crawler
 $ sudo docker build -t weather-crawler:v1.0.3 .
 ```
 
+# Deploy on Kubernetes
+
+```
+$ kubectl apply -f <path>/<to>/<weather-crawler>/kubernetes/weather-csv.yaml
+```
+
+
 # Configuration
 
 weather-crawlerは以下の環境変数を利用します。
